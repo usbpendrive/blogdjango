@@ -8,3 +8,9 @@ class Author(models.Model):
 
     def __str__(self):
         return f'{self.name} - {self.id}'
+
+
+class BlogAuthor(Author):
+    class Meta:
+        proxy = True
+
